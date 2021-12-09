@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8" />
+
     <!--link-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;600&family=Vidaloka&display=swap"rel="stylesheet"/>
     <!--titolo-->
-    <title> Our Team </title>
+    <title>Our Team</title>
 </head>
 <!--inizio body-->
 <body>
-    <!--script-->
-    <script src="/js/script.js"></script>
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title">Our team</h2>
+            <p class="section-description"></p>
+            <div class="team-container">
+                <!-- Inseriamo inizialmente una card statica per stilarla e vedere l'effetto finale -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett" />
+                    </div>
+                    <div class="card-text">
+                        <h3>Wayne Barnett</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="add-member">
+        <div class="container">
+            <h2 class="section-title">Add a new member</h2>
+            <div class="form-container">
+                <label for="name">Name </label>
+                <input type="text" id="name" />
+                <label for="role">Role </label>
+
+                <input type="text" id="role" />
+                <label for="name">Image </label>
+                <input type="text" id="image" />
+                <button type="button" id="addMemberButton">Add</button>
+            </div>
+        </div>
+    </section>
 </body>
+ 
 <!--fine body-->
 </html>
+
+
