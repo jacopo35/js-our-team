@@ -37,44 +37,23 @@ const team = [
     },
 ];
 
-const team_cont = document.querySelector(".team-container");
+let containerCards = document.querySelector('.team-container');
+makeCards(team, containerCards);
 
-const nameUser = document.getElementById("name");
-
-const roleUser = document.getElementById("role");
-
-const img = document.getElementById("image");
-
-const button = document.getElementById("addMemberButton");
-
-// aggiunta foto
-
-function addPhoto(array, container) {
-    for (let i = 0; i < array.length; i++) {
-const addTeam =`<div class="team-card">
-                <div class="card-image">
-                <img src="img/${team[i].image}"alt="${team[i].name}"/>
-                </div>
-                <div class="card-text">
-                <h3>${team[i].name}</h3>
-                <p>${team[i].role}</p>
-                </div>
-                </div>`
-container.innerHTML += addTeam
+function makeCards(array, container) {
+    container.innerHTML = '';
+    for (let index = 0; index < array.length; index++) {
+        const object = array[index];
+        const templateCard = `
+<div class="team-card">
+<div class="card-image">
+ <img src="img/${object.image}"alt="${object.name}"/>
+</div>
+<div class="card-text">
+    <h3>${object.name}</h3>
+         <p>${object.role}</p>
+</div>
+</div>`;
+    container.innerHTML += templateCard;
     }
 }
-
-addPhoto(team, team_cont);
-
-//aggiunta button 
-button.addEventListener("click", function () {
-    team_cont.innerHTML = ""
-    const obj = {
-        name: nameUser.value,
-        role: roleUser.value,
-        image: img.value
-    }
-    team.push(obj)
-
-    addPhoto(team, team_cont);
-})
